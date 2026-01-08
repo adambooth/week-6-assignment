@@ -5,6 +5,14 @@
   color: white;
 }
 
+a:hover {
+  opacity: 40%;
+}
+
+a:active {
+  border: 1px solid rgb(255, 255, 255);
+}
+
 html,
 body,
 #root,
@@ -242,9 +250,28 @@ footer > nav > a {
     position-anchor: --carousel;
   }
 
+  .carousel::scroll-button(left):hover,
+  .carousel::scroll-button(right):hover {
+    opacity: 40%;
+  }
+
+  .carousel::scroll-button(left):active,
+  .carousel::scroll-button(right):active {
+    border: 1px solid rgb(255, 255, 255);
+  }
+
   .card {
     flex: 1 1 100%;
     max-width: 20%;
+    cursor: pointer;
+  }
+
+  .card:hover {
+    opacity: 40%;
+  }
+
+  .card:active {
+    border: 1px solid rgb(255, 255, 255);
   }
 
   .main-img-container {
@@ -357,6 +384,15 @@ footer > nav > a {
   color: white;
   font-size: 1.2rem;
   border: 0;
+}
+
+.unsplash-container > button:hover {
+  opacity: 40%;
+  cursor: pointer;
+}
+
+.unsplash-container > button:active {
+  border: 1px solid rgb(255, 255, 255);
 }
 
 .generated-img {
