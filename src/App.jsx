@@ -63,7 +63,7 @@ function App() {
             <img
               className="generated-img"
               src={UnsplashPhoto.urls.regular}
-              alt={UnsplashPhoto.alt_description || "Random Unsplash"}
+              alt={UnsplashPhoto.alt_description}
             />
           ) : (
             <p>Loading image...</p>

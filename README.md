@@ -1,16 +1,48 @@
-# React + Vite
+Week 6 Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+https://week-6-assignment-y78m.onrender.com/
 
-Currently, two official plugins are available:
+https://github.com/adambooth/week-6-assignment
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Project Description:
+A amazon product page with working reviews.
 
-## React Compiler
+Things i struggled with:
+• Setting up the random generating photo on click of a button
+• Splitting everything into different components(connecting them mainly)
+• The Unsplash api setup I found the above online
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## async function getData() {
 
-## Expanding the ESLint configuration
+## const response = await fetch(`https://api.unsplash.com/photos/random`, {
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## headers: {
+
+## Authorization: `Client-ID ${key}`,
+
+## },
+
+## });
+
+## const data = await response.json();
+
+## setUnsplashPhoto(data);
+
+## }
+
+Things i did well:
+• Deploying to render
+• Use of Github
+• Responsiveness
+• CSS
+
+Things ive learnt:
+• How to connect components and pass things between them
+• Improved CSS skills
+• How to connect and retrieve data from APIs and use a .env file
+
+Resources Used:
+Youtube - https://www.youtube.com/watch?v=gmI5nvzv170&t=12s
+
+Requested Feedback:
+A youtube video on using react and apis together if possible
