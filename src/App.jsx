@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import MainImgContainer from "./components/MainImgContainer";
 import FrogAPI from "./components/FrogAPI";
 import SideBar from "./components/SideBar";
+import RandomPhotoGenerator from "./components/RandomPhotoGenerator";
 import "./App.css";
 
 function App() {
@@ -54,21 +55,10 @@ function App() {
             <MainImgContainer photo={photo} currentIndex={currentIndex} />
           </div>
         </div>
-        <div className="unsplash-container">
-          <h1>Why not try generate a random Photo?</h1>
-          <button className="generate-photo-btn" onClick={fetchPhoto}>
-            Click Me!
-          </button>
-          {UnsplashPhoto ? (
-            <img
-              className="generated-img"
-              src={UnsplashPhoto.urls.regular}
-              alt={UnsplashPhoto.alt_description}
-            />
-          ) : (
-            <p>Loading image...</p>
-          )}
-        </div>
+        <RandomPhotoGenerator
+          UnsplashPhoto={UnsplashPhoto}
+          fetchPhoto={fetchPhoto}
+        />
         <Footer />
       </div>
     </>
