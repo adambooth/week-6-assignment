@@ -11,7 +11,7 @@ body,
 .app-container {
   height: 100%;
   margin: 0;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(32, 32, 32);
 }
 
 body {
@@ -42,7 +42,7 @@ header {
 a {
   padding: 10px;
   margin: 10px;
-  background-color: rgb(24, 197, 47);
+  background-color: rgb(52, 52, 126);
   border-radius: 10px;
   text-decoration: none;
   color: white;
@@ -59,6 +59,10 @@ a {
   width: 100%;
 }
 
+h2 {
+  margin: 20px;
+}
+
 .main-img-container,
 .sidebar-container {
   width: 100%;
@@ -71,10 +75,10 @@ a {
 }
 
 .main-img {
-  width: 100%;
+  max-height: 466.89px;
   max-width: 700px;
-  height: auto;
   margin: 20px 0;
+  border-radius: 20px;
 }
 
 .thumbnail-container {
@@ -125,6 +129,9 @@ footer > nav > a {
   scroll-snap-type: x mandatory;
   padding: 10px 0;
   flex-wrap: nowrap;
+  background-color: rgb(68, 74, 78);
+  border-radius: 20px;
+  opacity: 80%;
 }
 
 .carousel::-webkit-scrollbar {
@@ -179,12 +186,12 @@ footer > nav > a {
 .carousel::scroll-button(right) {
   position: fixed;
   border: none;
-  background-color: blue;
+  background-color: rgb(52, 52, 126);
   font-size: 3rem;
   color: white;
   height: 60px;
   width: 60px;
-  border-radius: 50%;
+  border-radius: 20%;
   padding-bottom: 0.1em;
   cursor: pointer;
   position-anchor: --carousel;
@@ -212,6 +219,8 @@ footer > nav > a {
   border: 5px solid rgb(255, 255, 255);
 }
 
+/* ---------------------------- Media Queries ---------------------------- */
+
 @media (max-width: 1200px) {
   .carousel {
     gap: 0.5em;
@@ -222,12 +231,12 @@ footer > nav > a {
   .carousel::scroll-button(right) {
     position: fixed;
     border: none;
-    background-color: blue;
+    background-color: rgb(52, 52, 126);
     font-size: 1rem;
     color: white;
     height: 30px;
     width: 30px;
-    border-radius: 50%;
+    border-radius: 20%;
     padding-bottom: 0.1em;
     cursor: pointer;
     position-anchor: --carousel;
@@ -235,7 +244,7 @@ footer > nav > a {
 
   .card {
     flex: 1 1 100%;
-    max-width: 10%;
+    max-width: 20%;
   }
 
   .main-img-container {
@@ -252,7 +261,7 @@ footer > nav > a {
 
 @media (max-width: 800px) {
   .main-container {
-    height: 60%;
+    height: 100%;
   }
 }
 
@@ -262,16 +271,28 @@ footer > nav > a {
     width: 80%;
   }
 
+  .unsplash-container > h1 {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .generated-img {
+    max-width: 90%;
+    max-height: 90%;
+    padding: 10px;
+    margin: 10px auto;
+  }
+
   .carousel::scroll-button(left),
   .carousel::scroll-button(right) {
     position: fixed;
     border: none;
-    background-color: blue;
+    background-color: rgb(52, 52, 126);
     font-size: 1rem;
     color: white;
     height: 30px;
     width: 30px;
-    border-radius: 50%;
+    border-radius: 20%;
     padding-bottom: 0.1em;
     cursor: pointer;
     position-anchor: --carousel;
@@ -279,7 +300,7 @@ footer > nav > a {
 
   .card {
     flex: 1 1 100%;
-    max-width: 10%;
+    max-width: 20%;
   }
 
   .main-img-container {
@@ -306,12 +327,45 @@ footer > nav > a {
   }
   nav {
     grid-row-start: 2;
+    margin-top: 20px;
   }
   footer {
+    font-size: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
+}
+
+/* ---------------------------- Unsplash Area ---------------------------- */
+
+.unsplash-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.unsplash-container > button {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: rgb(52, 52, 126);
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  border: 0;
+}
+
+.generated-img {
+  width: 100%;
+  max-width: 600px;
+  max-height: 600px;
+  height: auto;
+  padding: 0;
+  margin: 10px auto;
+  border-radius: 20px;
+  display: block;
 }
