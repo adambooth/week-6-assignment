@@ -268,6 +268,7 @@ footer > nav > a {
 
   .card:hover {
     opacity: 40%;
+    cursor: pointer;
   }
 
   .card:active {
@@ -404,4 +405,21 @@ footer > nav > a {
   margin: 10px auto;
   border-radius: 20px;
   display: block;
+}
+
+/* ---------------------------- Search Area ---------------------------- */
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#filter-select,
+option {
+  padding: 10px;
+  margin: 10px;
+  color: black;
 }

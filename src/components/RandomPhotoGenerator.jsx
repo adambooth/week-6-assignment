@@ -5,6 +5,9 @@ function RandomPhotoGenerator({ UnsplashPhoto, fetchPhoto }) {
       <button className="generate-photo-btn" onClick={fetchPhoto}>
         Click Me!
       </button>
+      <div className="search-container">
+        <h1>Or Search For One?</h1>
+      </div>
       {UnsplashPhoto ? (
         <img
           className="generated-img"
